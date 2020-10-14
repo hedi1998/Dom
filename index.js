@@ -1,4 +1,4 @@
-
+    
 
 function increaseMobileAll() {
     const inceaseMobile = document.querySelector('#mobilePlus')
@@ -81,16 +81,24 @@ function decreaseCaseAll() {
 })}
 decreaseCaseAll()
 
+
 const removeItemMobile = document.querySelector('#removeItemMobile');
 removeItemMobile.addEventListener('click', function(){
+    const totalupdate = document.querySelector('#addNumber') ; 
+    const initValue = document.querySelector('#backCover')
+    totalupdate.innerText = initValue.innerText ;
     const removeItem = document.querySelector('#removeMobile')
-    removeItem.style.display = 'none'
+    removeItem.style.display = 'none' ; 
 })
 
 const removeItemCase = document.querySelector('#removeItemCase');
 removeItemCase.addEventListener('click', function(){
+    const initValue = document.querySelector("#dubleNumber");
+    const totalupdate = document.querySelector('#addNumber');
     const removeItem = document.querySelector('#removeCase')
-    removeItem.style.display = 'none'
+    removeItem.style.display = 'none' ;
+    totalupdate.innerText = initValue.innerText ; 
+    console.log(initValue) ; 
 })
 
 const confarmOrder = document.querySelector('#confarm')
@@ -99,5 +107,31 @@ confarmOrder.addEventListener('click', function(){
     hideCart.style.display = 'none'
 
     const showMassage = document.querySelector('#congrate')
-    showMassage.style.display = 'block'
-})
+    showMassage.style.display = 'block' 
+}); 
+
+
+function changelikebutton(){
+var img =   document.getElementById('heart-button-2').src
+  if (
+      img.indexOf('white.jfif')!=-1) {
+          document.getElementById('heart-button-2').src='red.png'
+      }
+      else{
+          document.getElementById('heart-button-2').src='white.jfif'
+      }
+ 
+
+}
+function changelikebutton2(){
+var img =   document.getElementById('heart-button').src
+  if (
+      img.indexOf('white.jfif')!=-1) {
+          document.getElementById('heart-button').src='red.png'
+      }
+      else{
+          document.getElementById('heart-button').src='white.jfif'
+      }
+ 
+
+}
